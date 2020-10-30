@@ -1,0 +1,11 @@
+{
+    "name": "mlcourse-codespaces",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "notebook",
+    "settings": {"terminal.integrated.shell.linux": "/bin/bash"},
+    "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
+    "forwardPorts": [8888],
+    "appPort": [8888],
+    "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"],
+    "runServices": ["notebook"],
+}
