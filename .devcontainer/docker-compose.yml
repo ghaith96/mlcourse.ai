@@ -2,7 +2,7 @@ version: "3"
 services:
   mlcourse: &mlcourse
     restart: unless-stopped
-    working_dir: /data
+    working_dir: /jupyter_english
     image: festline/mlcourse_ai
     logging:
       driver: json-file
