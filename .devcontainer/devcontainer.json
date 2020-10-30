@@ -1,11 +1,10 @@
 {
     "name": "mlcourse-codespaces",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "notebook",
+    "image": "festline/mlcourse_ai",
     "settings": {"terminal.integrated.shell.linux": "/bin/bash"},
     "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"],
     "forwardPorts": [8888],
     "appPort": [8888],
     "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"],
-    "runServices": ["notebook"],
+    "postCreateCommand": "jupyter notebook --allow-root --no-browser --ip=0.0.0.0 --port=4545 --NotebookApp.token='' --NotebookApp.password=''"
 }
